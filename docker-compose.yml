@@ -6,7 +6,7 @@ services:
         hostname: mysql2
         command: --default-authentication-plugin=mysql_native_password
         ports:
-            - 3307:3306
+            - 3306:3306
         volumes:
             - /etc/timezone:/etc/timezone:ro
             - /etc/localtime:/etc/localtime:ro
