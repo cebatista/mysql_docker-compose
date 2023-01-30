@@ -1,4 +1,9 @@
 version: '3.1'
+
+networks:
+    mynetwork:
+        driver: bridge
+
 services:
     db:
         image: mysql:8.0.31
@@ -18,3 +23,5 @@ services:
             MYSQL_DATABASE: testdb1
             MYSQL_USER: testuser
             MYSQL_PASSWORD: root
+        networks:
+            - mynetwork
